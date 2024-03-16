@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NLA - Sign In</title>
+<style>
+    body {
+        background-color: lightblue;
+        text-align: center;
+        padding-top: 50px;
+    }
+    input[type="text"],
+    input[type="password"] {
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+    <h1>Welcome to NLA</h1>
+    <form id="signInForm" action="javascript:void(0);">
+        <input type="text" id="username" name="username" placeholder="Username" required><br>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+        <button type="button" id="signInBtn">Sign In</button>
+    </form>
+
+    <script>
+        document.getElementById('signInBtn').addEventListener('click', function() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username && password) {
+                // Redirect to the second page
+                window.location.href = "http://www.nla.com/second_page.html";
+            } else {
+                alert('Please fill in both username and password.');
+            }
+        });
+    </script>
+</body>
+</html>
